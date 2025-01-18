@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+// these are symbolic constants
+// not variables
+// no = and no ;
 #define LOWER 0
 #define UPPER 300
 #define STEP 20
@@ -16,4 +19,3 @@ int main(){
                                               //right center, first is 3, 2nd is 12 digits long
     }
 }
-
