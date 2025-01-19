@@ -41,10 +41,21 @@ void eof_val(){ // exercise 1-7
     printf("value of EOF is: %d\n", end);
 }
 
+void char_counter(){
+    long nc = 0; // long int
+    while (getchar() != EOF) ++nc; // nc increments before execution bc prefix
+    printf("the string is %ld long\n", nc); // ld = long integer
+    // works, but you need to press ctrl+d to send EOF and print
+    // we don't need it in input_copy bc we have it assigned to a variable there
+    // the input_copy reads 1 char, assigns it to input, checks if it's EOF
+    // as soon as we press enter, the line buffer flushes, all the chars in the line are processed
+} 
+
 int main(){
     printf("chars function, chapter 1.5 start\n");
     chars();
     eof_val();
+    //char_counter();
     printf("input copy function, chapter 1.5.1\n");
     input_copy();
 }
