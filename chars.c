@@ -33,9 +33,18 @@ void input_copy(){
     }
 }
 
+void eof_val(){ // exercise 1-7
+    int end;
+
+    end = EOF;
+
+    printf("value of EOF is: %d\n", end);
+}
+
 int main(){
     printf("chars function, chapter 1.5 start\n");
     chars();
+    eof_val();
     printf("input copy function, chapter 1.5.1\n");
     input_copy();
 }
