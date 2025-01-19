@@ -46,9 +46,8 @@ void char_counter(){
     while (getchar() != EOF) ++nc; // nc increments before execution bc prefix
     printf("the string is %ld long\n", nc); // ld = long integer
     // works, but you need to press ctrl+d to send EOF and print
-    // we don't need it in input_copy bc we have it assigned to a variable there
-    // the input_copy reads 1 char, assigns it to input, checks if it's EOF
-    // as soon as we press enter, the line buffer flushes, all the chars in the line are processed
+    // we don't need it in input_copy bc putchar is there
+    // but we still need ctrl+d there to finish the loop
 } 
 
 int main(){
