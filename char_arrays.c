@@ -21,7 +21,7 @@ int main() {
             copy(longest, line);
         }
     }
-    if (max > 0) printf("%s", longest);
+    if (max > 0) printf("longest string is %s, its size is %d", longest, max);
     return 0;
 }
 
