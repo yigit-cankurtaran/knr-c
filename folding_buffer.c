@@ -30,6 +30,9 @@ int main(){
                         myString[j] = myString[i];
                     }
                     myString[j] = '\0';
+                    // this effectively prints the past chars
+                    // and moves the chars after it to the beginning of buffer
+                    // press ctrl+d to see the wrapped line
 
                     // resetting counters
                     pos = j;
