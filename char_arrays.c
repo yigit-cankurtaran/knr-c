@@ -1,7 +1,7 @@
 #include <stdio.h>
 #define MAXLINE 1000
 
-int getline(char line[] int maxline); // function prototype
+int getthis(char line[], int maxline); // function prototype
                                       // technically we're declaring here so we can use it in main
                                       // but we'll fill it out later
 void copy(char to[], char from[]);
@@ -15,7 +15,7 @@ int main() {
     char longest[MAXLINE]; // longest line saved here
 
     max = 0;
-    while ((len = getline(line, MAXLINE)) > 0) {
+    while ((len = getthis(line, MAXLINE)) > 0) {
         if (len > max) {
             max = len;
             copy(longest, line);
@@ -25,13 +25,15 @@ int main() {
     return 0;
 }
 
-int getline(char s[], int lim){ // s[] = input line, lim = limit
+int getthis(char s[], int lim){ // s[] = input line, lim = limit
     int c, i; // i = index counter, c = holds characters from input
     // c is int to correctly hold values like EOF
     for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i) s[i] = c;
+    // read one character at a time with getchar
+    // until we reach max limit or get to end of file or get to a new line
         if (c == '\n') {
             s[i] = c;
-            ++i;
+            ++i; // this is how we get the line length
         }
         s[i] = '\0';
         return i;
@@ -45,3 +47,9 @@ void copy(char to[], char from[]){
         i++; // go to the next char
     }
 }
+
+/* basically what this does is we have a longest line and its length in the main function.
+   getthis opens up an input for the user, checks the length and the chars of every line.
+   this is why newlines end the counting for i. and i returns an integer because we want the length
+   we compare the length of every line to the longest line, if our current line is longer we
+   copy that into longest and update the longest value.  */
