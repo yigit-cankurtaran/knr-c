@@ -17,6 +17,19 @@ int main(){
     int d = n | 0b01101111; // binary instead of octal
     // binaries are used with 0b prefix
     printf("let's see if this works, %d\n", d); // it does. prints 255
-}
 
-// let it marinate for a bit then do exercises 2-6 2-7 2-8
+    int e = n & ~077; // 077 is 111111 in octals
+    // ~077 is 000000
+    // taking an and of anything 0 is 0
+    printf("setting last 6 bits of n to 0, %d\n", e); // prints 128
+
+    int x = 5; // had to make it an int bc bit shifting doesn't work on floats.
+    int y = x << 2; // shifting to left = 1s move left 0s are 0s
+    // used for fast multiplication (powers of 2) or setting bits
+    // e.g. moving 2 bits to the left = x * 2^2 1 bit to the left would be x * 2^1
+    printf("x shifted 2 bits to the left: %d\n", y); // prints 20
+    int z = x >> 2; // shifting to the right
+    // used for fast division or setting bits
+    // e.g. moving 2 bits to the right = x / 2^2 1 bit to the left would be x / 2^1
+    printf("x shifted 2 bits to the right: %d\n", z); // prints 1
+}
