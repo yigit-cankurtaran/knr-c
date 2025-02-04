@@ -27,12 +27,6 @@ double my_atof(char s[]){
 
     for (i = 0; i < strlen(s); i++){
         if (s[i] == 'e' || s[i] == 'E') {
-            if (s[i + 1] == '-') {
-                scientific *= -1; // take the negative into account
-                i += 2; // skip over the negative and the -
-            } else {
-                i++; // skip over the -
-            }
             exponent = strtol(&s[i], NULL, 10); // start from s[i] and convert to int
             // send the leftover non-digits to NULL, base 10 numbers
         }
