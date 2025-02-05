@@ -32,6 +32,15 @@ int main(void){
     char hello[] = "hello";
     char world[] = "world";
 
-    printf("new string is %s\n", my_strcat(hello, world));
+    char* combined_string = my_strcat(hello, world);
+    if (combined_string == NULL) {
+        printf("malloc failed on main");
+        return 1;
+    }
+
+    printf("new string is %s\n", combined_string);
+
+    free(combined_string);
+
     return 0;
 }
