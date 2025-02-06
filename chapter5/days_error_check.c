@@ -44,6 +44,10 @@ void month_day(int year, int yearday, int *pmonth, int *pday) {
 
     *pmonth = i; // post-loop amount of i will be the number of months
     *pday = yearday; // the remainder from yearday will be our days
+    // the pointers here are solely to return multiple vars
+    // we create some ints in the function we call this in
+    // then we pass in their addresses to this function
+    // and this puts the values we want in their addresses.
 }
 
 int main(void) {
