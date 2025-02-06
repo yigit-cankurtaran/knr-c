@@ -5,8 +5,8 @@
 #include <stdlib.h>
 
 static char daytab[2][13] =  {
-    {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}, // leap year
-    {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31} // ordinary year
+    {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}, // ordinary year
+    {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31} // leap year
     // this starts with a 0 bc we want the months to be in proper indexes
 };
 // 2 dimensional array. 2 different arrays inside a single daytab array
